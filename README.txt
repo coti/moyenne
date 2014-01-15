@@ -12,21 +12,18 @@ Il a en outre besoin de la bibliothèque de maths `libm`, généralement présen
 
 Un Makefile est fourni dans le répertoire `src`. Il se compile donc avec la commande make. Dans un terminal, placez-vous dans le répertoire `src` et tapez :
 
-``` 
 make
-```
 
 Si vous ne disposez pas de make sur votre machine, compilez à la main :
-```
+
 gcc -O3 -o moyenne moyenne.c -lm
-```
 
 ## Utilisation
 
 Le programme prend en entrée un fichier de données sur deux colonnes. Sur chaque ligne la première colonne contient le paramètre, la deuxième contient la valeur mesurée. Le fichier doit être trié selon la première colonne.
 
 Par exemple :
-```
+
 1	564.254
 1 	468.157
 1 	655.464
@@ -35,17 +32,14 @@ Par exemple :
 2	5966.442
 5	451777.445
 5	456482.547
-```
 
 Si les données dont vous disposez ne sont pas triées, vous pouvez utiliser l'utilitaire `sort` :
-```
+
 sort -k 1 -n example.dat > sorted.dat
-```
 
 Le programme `moyenne` prend deux paramètres : le nom du fichier d'entrée et le nom du fichier de sortie. 
-```
+
 ./moyenne example.dat moy.dat
-```
 
 Ce fichier d'exemples est disponible dans le répertoire `example`.
 
