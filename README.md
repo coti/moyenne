@@ -1,0 +1,4 @@
+moyenne
+=======
+
+moyenne
