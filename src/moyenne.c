@@ -13,7 +13,9 @@
 #include <stdlib.h>
 #include <math.h>
 #include <sys/types.h>
+#if !defined(__APPLE__)
 #include <malloc.h>
+#endif
 #include <errno.h>
 
 #define LENGTH 50
@@ -22,6 +24,8 @@
 #define FALSE 0
 
 #define MAXFILES 20
+
+#if !defined(__APPLE__)
 
 /* From http://mbays.freeshell.org/darcs-repos/hunt-ng/hunt-ng/lib/fgetln.c */
 
@@ -97,6 +101,7 @@ fgetln(FILE *fd, size_t *len)
     *len = lnsize;
     return lnsize ? tbl[idx].bfr : 0;
 } /* fgetln */
+#endif
 
 int main(int argc, char **argv){
 
